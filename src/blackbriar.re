@@ -28,6 +28,9 @@ let addCoordinatesShorthand ::x ::y => {
   x + y;
 };
 
+let setColor ::color => color; /* Just an example! */
+let startAt ::r1 ::r2 => r1 ^ " " ^ r2; /* Just an example! */
+
 /* Optional labeled arguments */
 /* let drawCircle ::color ::radius=? () => {
   setColor color;
@@ -36,6 +39,21 @@ let addCoordinatesShorthand ::x ::y => {
     | Some r_ => startAt r_ r_;
   }
 } */
+
+/* Explicitly Passed Optional */
+/* let result = switch payloadRadius {
+  | None => drawCircle ::color ()
+  | Some r => drawCircle ::color radius::r ()
+}; */
+
+/* Or */
+/* let result = drawCircle ::color radius::?payloadRadius (); */
+
+/* Optional with Default value */
+/* let drawCircle ::radius=1 ::color () => {
+  setColor color;
+  startAt r r;
+}; */
 
 Random.self_init ();
 let break = {contents: false};
