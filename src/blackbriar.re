@@ -55,6 +55,17 @@ let startAt ::r1 ::r2 => r1 ^ " " ^ r2; /* Just an example! */
   startAt r r;
 }; */
 
+/* #TYPES */
+let score: int = 10;
+let myInt = 5;
+let myInt = (5 : int);
+let myInt = (5 : int) + (4 : int);
+let add (x: int) (y: int) :int => x + y;
+
+/* Types aliases */
+type scoreType = int;
+let x: scoreType = 10;
+
 Random.self_init ();
 let break = {contents: false};
 while (not break.contents) {
