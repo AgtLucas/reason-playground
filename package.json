@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/AgtLucas/reason-playground/issues"
   },
-  "homepage": "https://github.com/AgtLucas/reason-playground#readme"
+  "homepage": "https://github.com/AgtLucas/reason-playground#readme",
+  "devDependencies": {
+    "bs-platform": "^1.7.5"
+  }
 }
