@@ -57,14 +57,22 @@ let startAt ::r1 ::r2 => r1 ^ " " ^ r2; /* Just an example! */
 
 /* #TYPES */
 let score: int = 10;
-let myInt = 5;
-let myInt = (5 : int);
+/* let myInt = 5;
+let myInt = (5 : int); */
 let myInt = (5 : int) + (4 : int);
 let add (x: int) (y: int) :int => x + y;
 
 /* Types aliases */
 type scoreType = int;
 let x: scoreType = 10;
+
+/* Tuples */
+let myThreeFloast = (20.0, 30.0, 100.0);
+let myIntAndString = (20, "Not an Integer");
+
+/* Record */
+type person = {age: int, name: string}; /* type */
+let me = {age: 26, name: "Lucas"};
 
 Random.self_init ();
 let break = {contents: false};
