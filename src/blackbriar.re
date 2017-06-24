@@ -122,6 +122,18 @@ let howdy = switch (myAccount) {
   | Twitter name => "Hello " ^ name ^ "!"
 };
 
+/* Linked List */
+let myList = [1, 2, 3];
+let anotherList = [0, ...myList];
+/* Or */
+/* type myListType = Empty | NonEmpty int myListType;
+let myList = NonEmpty 1 (NonEmpty 2 (NonEmpty 3 Empty)); */
+
+/* Array */
+let myArray = [|"Hello", "world", "how are you"|];
+let world = myArray.(1);
+Array.set myArray 0 "hey";
+
 Random.self_init ();
 let break = {contents: false};
 while (not break.contents) {
