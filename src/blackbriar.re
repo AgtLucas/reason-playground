@@ -154,6 +154,8 @@ let rec callSecond = fun () => callFirst () and callFirst = fun () => callSecond
 let sum = fun x y => x + y;
 let addFour = sum 4;
 let six = addFour 2;
+/* Or */
+/* let sum = fun x => fun y => x + y; */
 
 
 Random.self_init ();
