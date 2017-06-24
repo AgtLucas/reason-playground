@@ -99,12 +99,21 @@ myself.age = myself.age + 1;
 /*
   Yes, No and PrettyMuch aren’t strings, nor references, nor some special data type. They’re called “constructors” (or “tag”). The | bar separates each constructor.
  */
+/* Note: variant constructors need to be capitalized. */
 type response =
   | Yes
   | No
   | PrettyMuch;
 
 let areYouCrushingIt = Yes;
+
+type account =
+  | None
+  | Twitter string
+  | Facebook string int;
+
+let myAccount = Facebook "AgtLucas" 26;
+let friendAccount = Twitter "ReasonML";
 
 Random.self_init ();
 let break = {contents: false};
