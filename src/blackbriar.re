@@ -71,8 +71,12 @@ let myThreeFloast = (20.0, 30.0, 100.0);
 let myIntAndString = (20, "Not an Integer");
 
 /* Record */
-type person = {age: int, name: string}; /* type */
-let me = {age: 26, name: "Lucas"};
+/* Records must have a type definition */
+type person = { age: int, name: string }; /* type */
+let me = { age: 26, name: "Lucas" };
+
+/* New records can be created from old one with the ... spread operator */
+let meNextYear = { ...me, age: me.age + 1 };
 
 Random.self_init ();
 let break = {contents: false};
