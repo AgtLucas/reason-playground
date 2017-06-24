@@ -146,6 +146,12 @@ type anotherPerson = { name: string, age: int };
 let somePerson = { name: "Seneca", age: 30 };
 let { name: n, age: a } = somePerson;
 
+/* Recursive function */
+let rec neverTerminate = fun () => neverTerminate ();
+
+let rec callSecond = fun () => callFirst () and callFirst = fun () => callSecond ();
+
+
 Random.self_init ();
 let break = {contents: false};
 while (not break.contents) {
