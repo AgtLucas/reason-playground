@@ -152,9 +152,8 @@ let rec neverTerminate = fun () => neverTerminate ();
 let rec callSecond = fun () => callFirst () and callFirst = fun () => callSecond ();
 /* Currying */
 let sum = fun x y => x + y;
-let addFive = add 5;
-let six = addFive 1;
-let fourteen = six 8;
+let addFour = sum 4;
+let six = addFour 2;
 
 
 Random.self_init ();
