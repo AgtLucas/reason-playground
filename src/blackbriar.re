@@ -87,7 +87,7 @@ let horsePower1 = { power: 10, metric };
 type car = { name: string, horsePower };
 
 /* Mutable Fields */
-type person = {
+type human = {
   name: string,
   mutable age: int
 };
