@@ -134,9 +134,17 @@ let myArray = [|"Hello", "world", "how are you"|];
 let world = myArray.(1);
 Array.set myArray 0 "hey";
 
-/* Externals */ 
+/* Externals */
 external getElementsByClassName : string => array Dom.element =
   "document.getElementsByClassName" [@@bs.val];
+
+/* Destructuring */
+let someInts = (10, 20);
+let (ten, twenty) = someInts;
+
+type anotherPerson = { name: string, age: int };
+let somePerson = { name: "Seneca", age: 30 };
+let { name: n, age: a } = somePerson;
 
 Random.self_init ();
 let break = {contents: false};
