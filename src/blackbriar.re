@@ -86,6 +86,15 @@ let horsePower1 = { power: 10, metric };
 
 type car = { name: string, horsePower };
 
+/* Mutable Fields */
+type person = {
+  name: string,
+  mutable age: int
+};
+
+let myself = { name: "Lucas", age: 26 };
+myself.age = myself.age + 1;
+
 Random.self_init ();
 let break = {contents: false};
 while (not break.contents) {
