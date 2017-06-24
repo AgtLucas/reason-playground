@@ -95,6 +95,17 @@ type human = {
 let myself = { name: "Lucas", age: 26 };
 myself.age = myself.age + 1;
 
+/* Variant */
+/*
+  Yes, No and PrettyMuch aren’t strings, nor references, nor some special data type. They’re called “constructors” (or “tag”). The | bar separates each constructor.
+ */
+type response =
+  | Yes
+  | No
+  | PrettyMuch;
+
+let areYouCrushingIt = Yes;
+
 Random.self_init ();
 let break = {contents: false};
 while (not break.contents) {
