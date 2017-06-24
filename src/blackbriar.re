@@ -148,8 +148,13 @@ let { name: n, age: a } = somePerson;
 
 /* Recursive function */
 let rec neverTerminate = fun () => neverTerminate ();
-
+/* Mutually Recursive Functions */
 let rec callSecond = fun () => callFirst () and callFirst = fun () => callSecond ();
+/* Currying */
+let sum = fun x y => x + y;
+let addFive = add 5;
+let six = addFive 1;
+let fourteen = six 8;
 
 
 Random.self_init ();
