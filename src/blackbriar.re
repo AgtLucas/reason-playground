@@ -78,6 +78,14 @@ let me = { age: 26, name: "Lucas" };
 /* New records can be created from old one with the ... spread operator */
 let meNextYear = { ...me, age: me.age + 1 };
 
+type horsePower = { power: int, metric: bool };
+
+let metric = true;
+
+let horsePower1 = { power: 10, metric };
+
+type car = { name: string, horsePower };
+
 Random.self_init ();
 let break = {contents: false};
 while (not break.contents) {
