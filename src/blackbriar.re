@@ -115,6 +115,13 @@ type account =
 let myAccount = Facebook "AgtLucas" 26;
 let friendAccount = Twitter "ReasonML";
 
+let howdy = switch (myAccount) {
+  | None => "Hi!"
+  | Facebook name age =>
+    "Hi " ^ name ^ ", you're " ^ (string_of_int age) ^ "-year-old."
+  | Twitter name => "Hello " ^ name ^ "!"
+};
+
 Random.self_init ();
 let break = {contents: false};
 while (not break.contents) {
