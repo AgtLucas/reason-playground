@@ -134,6 +134,10 @@ let myArray = [|"Hello", "world", "how are you"|];
 let world = myArray.(1);
 Array.set myArray 0 "hey";
 
+/* Externals */ 
+external getElementsByClassName : string => array Dom.element =
+  "document.getElementsByClassName" [@@bs.val];
+
 Random.self_init ();
 let break = {contents: false};
 while (not break.contents) {
