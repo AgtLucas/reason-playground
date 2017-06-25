@@ -186,6 +186,10 @@ type student = { taughtBy: teacher }
 and teacher = { students: list student };
 
 /* Type Arguments */
+type intCoordinates = (int, int, int);
+type floatCoordinates = (float, float, float);
+let anotherBuddy: intCoordinates = (10, 20, 30);
+
 type coordinates 'a = ('a, 'a, 'a);
 
 type intCoordinatesAlias = coordinates int;
