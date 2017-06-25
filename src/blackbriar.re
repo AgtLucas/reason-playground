@@ -209,3 +209,9 @@ let payloadResults: myPayloadResults string = [
   Ok { data: "Bye!" },
   Error "Something wrong happened!"
 ];
+
+/* Exceptions */
+/* try (somethingThatThrows ()) {
+  | Not_found => print_endline "Item not found!"
+  | Invalid_argument message => print_endline message
+}; */
