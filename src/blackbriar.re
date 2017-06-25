@@ -195,3 +195,17 @@ type intCoordinatesAlias = coordinates int;
 let buddy: intCoordinatesAlias = (10, 20, 20);
 /* Or */
 let floatBuddy: coordinates float = (10.5, 20.5, 30.5);
+
+/* Composable types and types with arguments */
+type result 'a 'b =
+  | Ok 'a
+  | Error 'b;
+
+type myPayload = { data: string };
+type myPayloadResults 'errorType = list (result myPayload 'errorType);
+
+let payloadResults: myPayloadResults string = [
+  Ok { data: "Hi!" },
+  Ok { data: "Bye!" },
+  Error "Something wrong happened!"
+];
