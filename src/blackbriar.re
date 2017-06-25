@@ -215,3 +215,12 @@ let payloadResults: myPayloadResults string = [
   | Not_found => print_endline "Item not found!"
   | Invalid_argument message => print_endline message
 }; */
+
+/* Pattern matching */
+type vehicle = { model: string, make: string };
+let mclaren = { make: "McLaren", model: "P1" };
+
+type carOwner =
+  | CarOwner string vehicle;
+
+let CarOwner name { model: model, make: make } = CarOwner "Lucas" mclaren;
