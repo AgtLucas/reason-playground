@@ -157,6 +157,19 @@ let six = addFour 2;
 /* Or */
 /* let sum = fun x => fun y => x + y; */
 
+/* Mutation */
+let myMValue = ref 10;
+let fakeV = true;
+if (fakeV) {
+  myMValue := 20;
+};
+
+/* Or */
+let anotoherMValue = { contents: 10 };
+if (fakeV) {
+  anotoherMValue.contents = 20;
+};
+
 
 Random.self_init ();
 let break = {contents: false};
