@@ -187,10 +187,11 @@ and teacher = { students: list student };
 
 /* Type Arguments */
 type intCoordinates = (int, int, int);
-type floatCoordinates = (float, float, float);
 let anotherBuddy: intCoordinates = (10, 20, 30);
 
 type coordinates 'a = ('a, 'a, 'a);
 
 type intCoordinatesAlias = coordinates int;
 let buddy: intCoordinatesAlias = (10, 20, 20);
+/* Or */
+let floatBuddy: coordinates float = (10.5, 20.5, 30.5);
