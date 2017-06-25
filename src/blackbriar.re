@@ -181,6 +181,11 @@ while (not break.contents) {
   }
 };
 
+/* Mutually Recursive Types */
+type student = { taughtBy: teacher }
+and teacher = { students: list student };
+
+/* Type Arguments */
 type coordinates 'a = ('a, 'a, 'a);
 
 type intCoordinatesAlias = coordinates int;
