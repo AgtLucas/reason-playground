@@ -172,7 +172,7 @@ if (fakeV) {
 
 /* Breaking out of loop */
 Random.self_init ();
-let break = {contents: false};
+let break = { contents: false };
 while (not break.contents) {
   if (Random.int 10 === 3) {
     break.contents = true
